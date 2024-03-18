@@ -1,0 +1,275 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: navy;
+  --secondary-color: white;
+  --third-color: rgb(1, 88, 1);
+  --fourth-color: white;
+  --fifth-color: rgb(146, 2, 2);
+  --sixth-color: green;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--fourth-color);
+}
+
+/* Header */
+header {
+  background-image: url(/Images/Burgerbeer.jpg);
+  max-height: 400px;
+  min-height: 25vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #9b9a9a;
+  background-blend-mode: multiply;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.header-text h1,
+.header-text h3 {
+  margin: 0;
+  padding: 0;
+  color: yellow;
+  margin-bottom: 10px;
+  text-shadow: 3px 3px 4px black;
+}
+
+.theme-container {
+  background-color: #e4e4e4;
+  border-radius: 20px;
+  width: 40px;
+  margin-bottom: 150px;
+}
+
+.theme-button {
+  display: inline-block;
+  cursor: pointer;
+  padding: 2px;
+}
+
+.dark-theme {
+  --primary-color: white;
+  --secondary-color: navy;
+  --third-color: rgb(58, 232, 58);
+  --fourth-color: darkblue;
+  --fifth-color: yellow;
+  --sixth-color: rgb(68, 240, 68);
+}
+
+.dark-theme-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Main content */
+.main-title {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.item-photo {
+  font-size: 4rem;
+  width: 120px;
+}
+
+.menu-item-data {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
+}
+
+.menu-item-data>p {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.menu-button {
+  height: 45px;
+  background-color: white;
+  align-self: center;
+  margin-left: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.menu-button:hover {
+  background-color: rgb(241, 240, 241);
+}
+
+.menu-item span {
+  font-size: .75rem;
+}
+
+/* Order content */
+.order-container {
+  display: none;
+}
+
+.order h1 {
+  text-align: center;
+  color: var(--third-color);
+  font-size: 2.2rem;
+  margin-top: 40px;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-around;
+}
+
+.order-item-info {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  width: 300px;
+}
+
+.order-item-info p {
+  font-size: 1.225rem;
+  color: var(--third-color);
+  font-weight: bold;
+}
+
+/* Order Summary */
+.total {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.total-price,
+#total-price {
+  font-size: 2.5rem;
+  color: var(--third-color);
+}
+
+.remove-btn {
+  font-size: .75rem;
+  color: var(--fifth-color);
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.place-order-btn {
+  font-size: 1.5rem;
+  width: 100%;
+  color: var(--secondary-color);
+  padding: 16px 0;
+  background-color: var(--sixth-color);
+  border: none;
+  cursor: pointer;
+}
+
+.place-order-btn:hover {
+  background-color: rgb(2, 179, 2);
+}
+
+/* Modal content */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 2px solid var(--primary-color);
+  margin: auto;
+  height: 470px;
+  width: 330px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-size: 1.25rem;
+  padding: 20px;
+}
+
+.modal-title {
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.payment-form input {
+  padding: 10px;
+  font-size: 1.1rem;
+  color: black;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 4px #666;
+}
+
+.complete-order-btn {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 8px 0px 8px 0px;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  transition: background-color 0.5s ease;
+}
+
+.close-btn-container {
+  text-align: right;
+}
+
+.close-modal-btn {
+  border: none;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+}
+
+.close-modal-btn:hover {
+  background-color: red;
+  color: var(--primary-color);
+}
+
+@media (max-width: 600px) {
+  .order-item {
+    display: grid;
+  }
+}
