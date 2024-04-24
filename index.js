@@ -114,7 +114,7 @@ paymentForm.addEventListener('submit', (e) => {
     modalTitle.innerHTML = `
         <div class="modal-inner-loading">
             <p>Processing</p>
-            <img src="images/loading.svg" class="loading">
+            <img src="Images/loading.svg" class="loading">
         </div>
     `
 
